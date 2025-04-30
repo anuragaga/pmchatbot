@@ -50,12 +50,12 @@ NEO4J_PASSWORD = os.getenv("NEO4J_PASSWORD")
 
 
 
-client_id = st.secrets["AZURE_CLIENT_ID"]
-client_secret = st.secrets["AZURE_CLIENT_SECRET"]
+client_id = AZURE_CLIENT_ID
+client_secret = AZURE_CLIENT_SECRET
 
-CISCO_OPENAI_APP_KEY = st.secrets["AZURE_CISCO_OPENAI_APP_KEY"]
+CISCO_OPENAI_APP_KEY = AZURE_CISCO_OPENAI_APP_KEY
 # your used id
-CISCO_BRAIN_USER_ID = st.secrets["CISCO_BRAIN_USER_ID"]
+# CISCO_BRAIN_USER_ID = st.secrets["CISCO_BRAIN_USER_ID"]
 
 url = "https://id.cisco.com/oauth2/default/v1/token"
 
@@ -83,12 +83,12 @@ llm = AzureChatOpenAI(deployment_name="gpt-4o-mini",
        )
 
 
-embedding_provider = OpenAIEmbeddings(openai_api_key=st.secrets["OPENAI_API_KEY"], model = "text-embedding-ada-002")
+embedding_provider = OpenAIEmbeddings(openai_api_key=OPENAI_API_KEY, model = "text-embedding-ada-002")
 
 graph = Neo4jGraph(
-    url = st.secrets["NEO4J_URI"],
-    username= st.secrets["NEO4J_USERNAME"],
-    password= st.secrets["NEO4J_PASSWORD"]
+    url = NEO4J_URI,
+    username= NEO4J_USERNAME,
+    password= NEO4J_PASSWORD
     )
 
 # import os
