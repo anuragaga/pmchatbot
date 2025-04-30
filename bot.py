@@ -1,11 +1,3 @@
-import streamlit as st
-import streamlit
-from utils import write_message
-# from PMagent import generate_response
-from PMAgentAzure import generate_response
-
-# Create secrects.toml file
-
 import os
 
 # Dynamically create the secrets.toml file
@@ -24,13 +16,17 @@ NEO4J_USERNAME = "{os.getenv('NEO4J_USERNAME')}"
 NEO4J_PASSWORD = "{os.getenv('NEO4J_PASSWORD')}"
 
 """
-
 # Write the content to the secrets.toml file
 with open("/root/.streamlit/secrets.toml", "w") as secrets_file:
     secrets_file.write(secrets_content)
 
 
 
+import streamlit as st
+import streamlit
+from utils import write_message
+# from PMagent import generate_response
+from PMAgentAzure import generate_response
 
 
 # Page Config
