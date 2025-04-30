@@ -14,7 +14,7 @@ secrets_content = f"""
 
 AZURE_CLIENT_ID = "{os.getenv('AZURE_CLIENT_ID')}"
 AZURE_CLIENT_SECRET = "{os.getenv('AZURE_CLIENT_SECRET')}"
-AZURE_CISCO_OPENAI_APP_KEY = "{os.getenv('AZURE_CISCO_OPENAI_APP_KEY)}"
+AZURE_CISCO_OPENAI_APP_KEY = "{os.getenv('AZURE_CISCO_OPENAI_APP_KEY')}"
 CISCO_BRAIN_USER_ID = "{os.getenv('CISCO_BRAIN_USER_ID')}"
 URL = "{os.getenv('URL')}"
 AZURE_ENDPOINT = "{os.getenv('AZURE_ENDPOINT')}"
