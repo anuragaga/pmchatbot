@@ -29,11 +29,24 @@ import openai
 import traceback
 import base64
 import streamlit as st
+import streamlit
 from dotenv import load_dotenv
 load_dotenv()
 
 
 """### QUERYING GRAPH DATABASE"""
+
+import os
+AZURE_CLIENT_ID = os.getenv("AZURE_CLIENT_ID")
+AZURE_CLIENT_SECRET = os.getenv("AZURE_CLIENT_SECRET")
+AZURE_CISCO_OPENAI_APP_KEY = os.getenv("AZURE_CISCO_OPENAI_APP_KEY")
+CISCO_BRAIN_USER_ID = os.getnv("CISCO_BRAIN_USER_ID")
+URL = os.getenv("URL")
+AZURE_ENDPOINT = os.getenv("AZURE_ENDPOINT")
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+NEO4J_URI = os.getenv("NEO4J_URI")
+NEO4J_USERNAME = os.getenv("NEO4J_USERNAME")
+NEO4J_PASSWORD = os.getenv("NEO4J_PASSWORD")
 
 
 
