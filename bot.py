@@ -1,6 +1,18 @@
 import os
 
 # Dynamically create the secrets.toml file
+
+secrets_dir = "/root/.streamlit"
+secrets_path = os.path.join(secrets_dir, "secrets.toml")
+
+os.makedirs(secrets_dir, exist_ok=True)
+
+secrets_dir = "/tmp/.streamlit"
+secrets_path = os.path.join(secrets_dir, "secrets.toml")
+
+os.makedirs(secrets_dir, exist_ok=True)
+
+
 secrets_content = f"""
 [general]
 
